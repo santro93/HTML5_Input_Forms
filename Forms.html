@@ -1,0 +1,32 @@
+﻿<html>
+<head>
+    <title>HTMLForms</title>
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form>
+            <header class="headercss"><h1>User Form</h1></header>
+            <div class="formgroup">
+                <lable>Enter Your Name: </lable>
+                <input type="text" placeholder="Enter Your Name" name="name" id="name">
+                <error-output class="texterror" for="text"></error-output>
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+    <script>
+            const text=document.querySelector("#name");
+            let texterror=document.querySelector(".texterror");
+            text.addEventListener('input',function()
+            {
+                let nameRegex=RegExp('^[A-Z]{1}[a-z]{2}$');
+              ///  if(nameRegex.test(text.value))
+               //     texterror.textContent="";
+              //  else
+              //  texterror.textContent="Name is incorrect";
+
+            });
+    </script>
+</body>
+</html>
