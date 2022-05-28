@@ -33,7 +33,7 @@ label, input, button {
     line-height: 1.5;
 }
 
-.texterror {
+.nameerror, .mobileerror {
     color: red;
 }
 
@@ -55,7 +55,7 @@ input {
 }
 
 button {
-    width: 70%;
+    display: flex;
     margin: 0 auto;
     background-color: green;
 }
