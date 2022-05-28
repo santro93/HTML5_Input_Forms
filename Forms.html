@@ -17,6 +17,11 @@
                 <input type="text" placeholder="Enter Your Mobile" name="mobile" id="mobile">
                 <error-output class="mobileerror" for="text"></error-output>
             </div>
+            <div class="formgroup">
+                <lable>Enter Your Password: </lable>
+                <input type="password" placeholder="Enter Your Password" name="password" id="password">
+                <error-output class="passworderror" for="text"></error-output>
+            </div>
             <button>Submit</button>
         </form>
         <div>
@@ -24,6 +29,7 @@
             <ul>
                 <li>Firstname:First Name start with Cap and has minimum 3 characters</li>
                 <li>Mobile Format-E.g. 91 9919819801 </li>
+                <li>Password:Minimum 8 Characters</li>
             </ul>
         </div>
     </div>
@@ -46,6 +52,16 @@
                 mobileerror.textContent = "";
             else
                 mobileerror.textContent = "Mobile format is incorrect";
+        });
+
+        const password = document.querySelector("#password");
+        let passerror = document.querySelector(".passworderror");
+        password.addEventListener('input', function () {
+            let passRegex = RegExp('^[0-9a-zA-Z]{8,}$');
+            if (passRegex.test(password.value))
+                passerror.textContent = "";
+            else
+                passerror.textContent = "Minimum 8 Characters";
         });
     </script>
 </body>
