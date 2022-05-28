@@ -33,7 +33,7 @@ label, input, button {
     line-height: 1.5;
 }
 
-.nameerror, .mobileerror {
+.nameerror, .mobileerror, .passworderror {
     color: red;
 }
 
